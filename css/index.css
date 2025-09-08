@@ -1,4 +1,46 @@
 body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #582c4d;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  font-weight: 900;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+body {
   background-color: #d5b9b2;
   color: #121619;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -37,6 +79,14 @@ p {
   list-style-type: none;
   line-height: 1.75;
   padding-left: 0;
+  display: flex;
+  gap: 30%;
+  justify-content: center;
+  text-align: center;
+}
+
+#connect h2 {
+  margin-bottom: 0;
 }
 
 #connect a {
@@ -47,4 +97,12 @@ p {
 
 #connect a:hover {
   color: #a26769;
+}
+
+.socials {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
