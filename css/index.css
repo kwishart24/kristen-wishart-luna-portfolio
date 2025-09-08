@@ -1,0 +1,50 @@
+body {
+  background-color: #d5b9b2;
+  color: #121619;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  text-align: center;
+  color: #582c4d;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+img {
+  margin: auto;
+  max-width: 15%;
+}
+
+section {
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-weight: 900;
+  color: #3a4f41;
+}
+
+p {
+  display: inline;
+  color: #582c4d;
+}
+
+#experience ul {
+  list-style-type: none;
+  line-height: 1.75;
+  padding-left: 0;
+}
+
+#connect a {
+  list-style: none;
+  text-decoration: none;
+  color: #582c4d;
+}
+
+#connect a:hover {
+  color: #a26769;
+}
