@@ -1,23 +1,87 @@
 body {
   margin: 0;
+  padding: 0;
+  background-color: #d5b9b2;
+  color: #121619;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change color of body on tablet*/
+  body {
+    background-color: #d5b9b2;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Change color of body on desktop*/
+  body {
+    background-color: #e1ece3;
+  }
 }
 
 header {
-  width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 1rem;
   background-color: #582c4d;
   position: sticky;
   top: 0;
 }
 
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change color of body on tablet*/
+  header {
+    background-color: #582c4d;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Larger header*/
+  header {
+    padding: 5em;
+  }
+
+  /*Change color*/
+  header {
+    background-color: #294d4a;
+  }
+}
+
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
   gap: 50px;
   text-align: center;
   font-weight: 900;
+  padding-left: 0;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Larger gap between text in nav bar on tablet*/
+  nav ul {
+    gap: 55px;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Larger gap between text in nav bar on desktop*/
+  nav ul {
+    gap: 80px;
+  }
 }
 
 nav a {
@@ -25,9 +89,27 @@ nav a {
   color: #fff;
 }
 
-nav a:hover {
-  color: #fff;
-  text-decoration: underline;
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Larger text on nav bar on desktop*/
+  nav a {
+    font-size: 1.25rem;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Larger text on nav bar on desktop*/
+  nav a {
+    font-size: 2rem;
+  }
+  /*Hover over nav bar on desktop*/
+  nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
 
 .nav-bar {
@@ -40,10 +122,27 @@ nav a:hover {
   align-content: center;
 }
 
-body {
-  background-color: #d5b9b2;
-  color: #121619;
-  font-family: Georgia, "Times New Roman", Times, serif;
+#main {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Increase padding on tablet*/
+  #main {
+    padding: 0 5em;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Increase padding on desktop*/
+  #main {
+    padding: 0 10em;
+  }
 }
 
 h1 {
@@ -53,13 +152,52 @@ h1 {
   font-weight: 500;
 }
 
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Larger h1 and color change on tablet*/
+  h1 {
+    font-size: 4rem;
+    color: #582c4d;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Larger h1 and color change on desktop*/
+  h1 {
+    font-size: 6rem;
+    color: #294d4a;
+  }
+}
+
 img {
   margin: auto;
-  max-width: 15%;
+  max-width: 70%;
+  margin-bottom: 1em;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*img width on tablet*/
+  img {
+    max-width: 60%;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*img width on desktop*/
+  img {
+    max-width: 50%;
+  }
 }
 
 section {
-  margin: 2rem auto;
+  margin: 2rem 0;
   padding: 0;
   text-align: center;
   font-size: 1.25rem;
@@ -67,20 +205,61 @@ section {
 
 h2 {
   font-weight: 900;
-  color: #3a4f41;
+  color: #582c4d;
+  font-size: 2rem;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change color and size of h2 on desktop*/
+  h2 {
+    color: #582c4d;
+    font-size: 2rem;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Change color and size of h2 on desktop*/
+  h2 {
+    color: #294d4a;
+    font-size: 3rem;
+  }
 }
 
 p {
   display: inline;
-  color: #582c4d;
+  color: #121619;
+  text-align: center;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change color and size of h2 on tablet*/
+  h2 {
+    color: #582c4d;
+    font-size: 2rem;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Change size of p on desktop*/
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 #experience ul {
+  display: flex;
   list-style-type: none;
   line-height: 1.75;
   padding-left: 0;
-  display: flex;
-  gap: 30%;
+  gap: 10%;
   justify-content: center;
   text-align: center;
 }
@@ -95,8 +274,31 @@ p {
   color: #582c4d;
 }
 
-#connect a:hover {
-  color: #a26769;
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change color of a on tablet*/
+  #connect a {
+    color: #582c4d;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Change color of a on desktop*/
+  #connect a {
+    color: #121619;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Add hovering effect on desktop*/
+  #connect a:hover {
+    color: #a26769;
+  }
 }
 
 .socials {
