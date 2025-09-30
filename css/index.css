@@ -316,6 +316,141 @@ p {
   color: #582c4d;
 }
 
+form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+form input {
+  margin: 2em auto;
+}
+
+#submit-btn {
+  margin-top: 2em;
+}
+
+#messages {
+  margin-bottom: 1em;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message section tablet view*/
+  #messages {
+    margin-bottom: 3em;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*message section on desktop*/
+  #messages {
+    margin-bottom: 3em;
+  }
+}
+
+#messages ul {
+  list-style-type: none;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding-left: 0;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message grid for tablet view*/
+  #messages ul {
+    display: grid;
+    grid-template-rows: repeat(auto);
+    row-gap: 50%;
+    margin-top: 2em;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*message grid on desktop*/
+  #messages ul {
+    display: grid;
+    grid-template-rows: repeat(auto);
+    row-gap: 1em;
+    margin-top: 2em;
+  }
+}
+
+#messages li {
+  margin: 1em auto;
+  display: grid;
+  row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message grid for li tablet view*/
+  #messages li {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5em;
+  }
+  .remove-btn .edit-btn {
+    padding: 1em;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Message grid for li on desktop*/
+  #messages li {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5em;
+  }
+}
+
+button {
+  background-color: #582c4d;
+  color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  border-color: #582c4d;
+  /* max-width: 50%;
+  min-width: 1em; */
+  margin: auto;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Edit and remove button for tablet view*/
+  .remove-btn,
+  .edit-btn {
+    padding: 1em;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Edit and remove button on desktop*/
+  .remove-btn,
+  .edit-btn {
+    padding: 1em;
+  }
+}
+
 /*Tablet View*/
 
 @media screen and (min-width: 768px) {
