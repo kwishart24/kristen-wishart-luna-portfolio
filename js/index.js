@@ -103,3 +103,27 @@ footer.appendChild(copyright);
 
 //Footer style
 footer.style.textAlign = "center";
+
+//-------------------- API CALL --------------------
+fetch("https://api.github.com/users/kwishart24/repos")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("request failed");
+    }
+    return response.json();
+  })
+  .then((repositories) => {
+    console.log(repositories);
+    //-------------------- PROJECTS SECTION --------------------
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerHTML = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("An error occurred:", error);
+  });

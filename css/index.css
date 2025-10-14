@@ -306,6 +306,45 @@ p {
   }
 }
 
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Grid for tablet view*/
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, auto); */
+    gap: 10px 5px;
+    font-size: 3rem;
+    width: 100%;
+    /* text-wrap: nowrap; */
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Grid of 3x2 on desktop*/
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, auto); */
+    gap: 10px 0px;
+    font-size: 3rem;
+    width: 100%;
+    /* text-wrap: nowrap; */
+  }
+}
+
 #connect h2 {
   margin-bottom: 0;
 }
