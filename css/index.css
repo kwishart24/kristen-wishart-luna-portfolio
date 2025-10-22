@@ -197,7 +197,8 @@ img {
 }
 
 section {
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: 80%;
   padding: 0;
   text-align: center;
   font-size: 1.25rem;
@@ -239,10 +240,9 @@ p {
 /*Tablet View*/
 
 @media screen and (min-width: 768px) {
-  /*Change color and size of h2 on tablet*/
-  h2 {
-    color: #582c4d;
-    font-size: 2rem;
+  /*Change size of p on tablet*/
+  p {
+    font-size: 1.5rem;
   }
 }
 
@@ -251,6 +251,15 @@ p {
 @media screen and (min-width: 1024px) {
   /*Change size of p on desktop*/
   p {
+    font-size: 2rem;
+  }
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Change size of p on tablet*/
+  ul {
     font-size: 1.5rem;
   }
 }
@@ -260,7 +269,7 @@ p {
 @media screen and (min-width: 1024px) {
   /*Change font size of ul on desktop*/
   ul {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -321,11 +330,11 @@ p {
   /*Grid for tablet view*/
   #projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: repeat(2, auto); */
     gap: 10px 5px;
     font-size: 3rem;
-    width: 100%;
+    max-width: 80%;
     /* text-wrap: nowrap; */
   }
 }
@@ -338,10 +347,29 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* grid-template-rows: repeat(2, auto); */
-    gap: 10px 0px;
+    gap: 10px 5px;
     font-size: 3rem;
-    width: 100%;
+    max-width: 100%;
+    margin: 30%;
     /* text-wrap: nowrap; */
+  }
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Grid for tablet view*/
+  #projects-grid > li {
+    font-size: 2rem;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Grid of 3x2 on desktop*/
+  #projects-grid > li {
+    font-size: 2rem;
   }
 }
 
@@ -362,14 +390,114 @@ form {
 
 form input {
   margin: 2em auto;
+  font-size: 1.1rem;
+}
+
+form label {
+  font-size: 1.1rem;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message section tablet view*/
+  form label {
+    font-size: 2rem;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*message section on desktop*/
+  form label {
+    font-size: 2rem;
+  }
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message section tablet view*/
+  form input {
+    font-size: 2rem;
+    margin: 0.75em auto;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*message section on desktop*/
+  form input {
+    font-size: 2rem;
+    margin: 0.75em auto;
+  }
+}
+
+/* Phone View*/
+
+@media screen and (max-width: 767px) {
+  /*Message section phone view*/
+  #usersMessage {
+    width: 17em;
+    height: 5em;
+    margin-top: 2em;
+  }
+}
+
+/* Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message section phone view*/
+  #usersMessage {
+    width: 26em;
+    height: 5em;
+    margin-top: 2em;
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*Message section phone view*/
+  #usersMessage {
+    font-size: 1.5rem;
+  }
 }
 
 #submit-btn {
   margin-top: 2em;
+  font-size: 1rem;
+}
+
+/*Tablet View*/
+
+@media screen and (min-width: 768px) {
+  /*Message section tablet view*/
+  #submit-btn {
+    background-color: #582c4d;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+/*Desktop View*/
+
+@media screen and (min-width: 1024px) {
+  /*message section on desktop*/
+  #submit-btn {
+    background-color: #294d4a;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-color: #294d4a;
+  }
 }
 
 #messages {
   margin-bottom: 1em;
+  margin-top: 2em;
 }
 
 /*Tablet View*/
@@ -378,6 +506,7 @@ form input {
   /*Message section tablet view*/
   #messages {
     margin-bottom: 3em;
+    margin-top: 2em;
   }
 }
 
@@ -387,6 +516,7 @@ form input {
   /*message section on desktop*/
   #messages {
     margin-bottom: 3em;
+    margin-top: 2em;
   }
 }
 
@@ -446,6 +576,7 @@ form input {
   }
   .remove-btn .edit-btn {
     padding: 1em;
+    font-size: 1.25rem;
   }
 }
 
@@ -470,16 +601,6 @@ button {
   margin: auto;
 }
 
-/*Tablet View*/
-
-@media screen and (min-width: 768px) {
-  /*Edit and remove button for tablet view*/
-  .remove-btn,
-  .edit-btn {
-    padding: 1em;
-  }
-}
-
 /*Desktop View*/
 
 @media screen and (min-width: 1024px) {
@@ -487,6 +608,9 @@ button {
   .remove-btn,
   .edit-btn {
     padding: 1em;
+    background-color: #294d4a;
+    font-size: 1.25rem;
+    border-color: #294d4a;
   }
 }
 
@@ -504,8 +628,8 @@ button {
 @media screen and (min-width: 1024px) {
   /*Change color of a on desktop*/
   #connect a {
-    color: #121619;
-    font-size: 1.5rem;
+    color: #294d4a;
+    font-size: 2rem;
   }
 }
 
